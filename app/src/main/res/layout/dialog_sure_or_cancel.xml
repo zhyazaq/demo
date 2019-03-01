@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_update_back"
+    android:orientation="vertical">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_dialog_status"
+        android:layout_width="@dimen/px190"
+        android:layout_height="@dimen/px190"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/px90"
+        android:src="@drawable/img_dialog_success" />
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="@dimen/px580"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/img_dialog_status"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/px76"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/px20"
+        android:text="是否放弃本次支付？"
+        android:maxLines="3"
+        android:textColor="@color/text_3"
+        android:textSize="@dimen/px46" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/px86"
+        android:id="@+id/ll_sure_only"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="@dimen/px42"
+            android:layout_marginRight="@dimen/px42"
+            android:textColor="@color/text_ffffff"
+            android:textSize="@dimen/px46"
+            android:text="确定"
+            android:id="@+id/tv_only_sure"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_base_bt"
+            android:layout_marginBottom="@dimen/px42"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px130" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/px86"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/ll_dialog_buttom"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+    <include layout="@layout/divided_line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px130"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_cancel"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_6"
+            android:textSize="@dimen/px46" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_help" />
+
+        <Button
+            android:id="@+id/bt_sure"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/text_208aeb"
+            android:textSize="@dimen/px46" />
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+</LinearLayout>

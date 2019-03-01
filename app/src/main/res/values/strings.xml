@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DME</string>
+    <string name="network_is_not_available">网络不可用，请检查网络连接</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="home_titile">#ff5300</color>
+    <!--字体颜色-->
+    <color name="text_3">#333333 </color>
+    <color name="text_6">#666666 </color>
+    <color name="text_8">#888888 </color>
+    <color name="text_9">#999999 </color>
+    <color name="text_ff8a00">#ff8a00 </color>
+    <color name="text_4cff8a00">#4cff8a00 </color>
+    <color name="text_878787">#878787 </color>
+    <color name="text_eb2000">#eb2000 </color>
+    <color name="text_c5c5c5">#c5c5c5 </color>
+    <color name="text_36ab65">#36ab65 </color>
+    <color name="text_0fa7fa">#0fa7fa </color>
+    <color name="text_9f9f9f">#9f9f9f </color>
+    <color name="text_f0f0f0">#f0f0f0 </color>
+    <color name="text_3678cd">#3678cd </color>
+    <color name="text_ffffff">#ffffff </color>
+    <color name="text_ff7e00">#ff7e00 </color>
+    <color name="text_ff2323">#ff7e00 </color>
+    <color name="text_fff1d8">#fff1d8 </color>
+    <color name="text_fb6f00">#fb6f00 </color>
+    <color name="text_0078ff">#0078ff </color>
+    <color name="text_148fe3">#148fe3 </color>
+    <color name="text_208aeb">#208aeb </color>
+    <color name="text_1c82d2">#1c82d2 </color>
+    <color name="alpay_back">#ffe5e5e5</color>
+    <color name="text_e23023">#e23023</color>
+    <color name="text_508cee">#508cee</color>
+    <color name="text_da2330">#da2330</color>
+    <color name="text_29c03e">#29c03e</color>
+</resources>

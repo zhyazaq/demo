@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.digitalnet.push"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "9262dc5e5877a6db8a480918", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+
+    }
+    signingConfigs {
+        debug {
+            storeFile file('digitalpush.jks')
+            storePassword "key.rnjf.%%.push"
+            keyAlias "push"
+            keyPassword "key.rnjf.%%.push"
+        }
+        release {
+            storeFile file('digitalpush.jks')
+            storePassword "key.rnjf.%%.push"
+            keyAlias "push"
+            keyPassword "key.rnjf.%%.push"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            //zipAlign优化
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 自定义输出配置
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "push${defaultConfig.versionName}.apk"
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    api 'cn.jiguang.sdk:jpush:3.1.6'  // 此处以JPush 3.1.6 版本为例。
+    api 'cn.jiguang.sdk:jcore:1.2.5'  // 此处以JCore 1.2.5 版本为例。
+
+    api 'com.zhy:autolayout:1.4.5'
+    //---------------------fastjson -------------
+
+    api 'com.alibaba:fastjson:1.2.54'
+    api 'com.alibaba:fastjson:1.1.70.android'
+
+    //---------------------json解析 -------------
+    api 'com.google.code.gson:gson:2.8.2'
+
+    //---------------------retrofit -------------
+    //retrofit https://github.com/square/retrofit
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    api 'com.squareup.okhttp3:okhttp:3.9.1'
+    api 'com.squareup.okhttp3:okhttp-urlconnection:3.8.1'
+    //---------------------rxjava -------------
+    api "io.reactivex.rxjava2:rxjava:2.1.9" // 必要rxjava2依赖
+    api "io.reactivex.rxjava2:rxandroid:2.0.2" // 必要rxandrroid依赖，切线程时需要用到
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //---------------------glide---------------------
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    //----------------------------沉浸式状态栏------------------------
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.2-beta01'
+
+
+
+    //必须使用
+    api 'com.lzy.net:okgo:3.0.4'
+
+//以下三个选择添加，okrx和okrx2不能同时使用
+    api 'com.lzy.net:okrx2:2.0.2'
+    api 'com.lzy.net:okserver:2.0.5'
+}

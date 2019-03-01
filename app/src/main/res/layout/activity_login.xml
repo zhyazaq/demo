@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/login_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:gravity="center"
+        android:layout_marginTop="@dimen/px198"
+        android:textStyle="bold"
+        android:text="捷豹路虎中国移动端管理平台"
+        android:textColor="@color/text_ffffff"
+        android:textSize="@dimen/px62"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="@dimen/px236"
+        android:layout_marginLeft="@dimen/px42"
+        android:layout_marginRight="@dimen/px42"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/px900"
+        android:layout_height="@dimen/px130">
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_marginLeft="@dimen/px42"
+            android:textColorHint="@color/text_ffffff"
+            android:hint="用户名"
+            android:id="@+id/tv_user_phone"
+            android:textColor="@color/text_ffffff"
+            android:textSize="@dimen/px42"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <!--分割线-->
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/px42"
+        android:layout_marginRight="@dimen/px42"
+        android:background="@color/text_f0f0f0"
+        android:layout_width="@dimen/px900"
+        android:layout_height="2px"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/px62"
+        android:layout_marginLeft="@dimen/px42"
+        android:layout_marginRight="@dimen/px42"
+        android:orientation="horizontal"
+        android:layout_width="@dimen/px900"
+        android:layout_height="@dimen/px130">
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/user_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_marginLeft="@dimen/px42"
+            android:textColorHint="@color/text_ffffff"
+            android:hint="密码"
+            android:id="@+id/tv_user_pwd"
+            android:textColor="@color/text_ffffff"
+            android:textSize="@dimen/px42"
+            android:inputType="textPassword"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <!--分割线-->
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/px42"
+        android:layout_marginRight="@dimen/px42"
+        android:background="@color/text_f0f0f0"
+        android:layout_width="@dimen/px900"
+        android:layout_height="2px"/>
+
+    <TextView
+        android:id="@+id/tv_login_bt"
+        android:background="@drawable/shape_login_bt"
+        android:layout_marginTop="@dimen/px102"
+        android:text="登录"
+        android:textSize="@dimen/px42"
+        android:textColor="@color/text_ffffff"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/px900"
+        android:layout_height="@dimen/px130" />
+
+</LinearLayout>

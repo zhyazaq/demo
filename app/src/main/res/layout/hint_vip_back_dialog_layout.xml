@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@drawable/shape_update_back"
+              android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:id="@+id/ll_title"
+                  android:visibility="gone"
+                  android:layout_height="wrap_content">
+    <TextView android:layout_width="match_parent"
+              android:layout_marginLeft="@dimen/px20"
+              android:layout_marginRight="@dimen/px20"
+              android:gravity="center"
+              android:id="@+id/tv_title"
+              android:layout_gravity="center"
+              android:textSize="@dimen/px46"
+              android:textColor="#ff5300"
+              android:text="温馨提示"
+              android:layout_height="@dimen/px140"/>
+        <View style="@style/line"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tv_vip_back"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/px200"
+              android:layout_gravity="center"
+              android:layout_marginLeft="@dimen/px20"
+              android:layout_marginRight="@dimen/px20"
+              android:gravity="center"
+              android:text="确认是否退出？"
+              android:textColor="#666"
+              android:textSize="@dimen/px42"/>
+    <View style="@style/line"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="@dimen/px130">
+        <Button android:layout_width="0dp"
+                style="?android:attr/borderlessButtonStyle"
+                  android:layout_weight="1"
+                  android:id="@+id/tv_vip_giveup"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                android:background="@null"
+                  android:textColor="#666"
+                  android:textSize="@dimen/px42"
+                  android:text="取消"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                  android:background="@drawable/line_help"
+                  android:layout_height="wrap_content"/>
+        <Button android:layout_width="0dp"
+                style="?android:attr/borderlessButtonStyle"
+                  android:layout_weight="1"
+                  android:id="@+id/tv_vip_sure"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                   android:background="@null"
+                  android:textColor="#08B9FB"
+                  android:textSize="@dimen/px42"
+                  android:text="确认退出"
+                  android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
